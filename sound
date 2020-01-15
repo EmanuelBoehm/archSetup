@@ -1,0 +1,4 @@
+#!/bin/bash
+#run the following command to get outputs which might work
+#pactl list sinks | grep name
+pacmd set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo
