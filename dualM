@@ -1,2 +1,4 @@
 #!/bin/bash
+#get the current hdmi ports with xrandr -q | grep HDMI
+sleep 1
 xrandr --output HDMI2 --auto --left-of HDMI-2
