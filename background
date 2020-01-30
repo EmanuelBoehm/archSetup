@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python3 $HOME/scripts/background/main.py
