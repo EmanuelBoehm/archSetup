@@ -3,6 +3,7 @@
 sxhkd &
 compton -b &
 background &
+conky -c $HOME/.config/conky/conkyrc &
 $HOME/git/archSetup/dualM &
 $HOME/.config/polybar/launch.sh
 
