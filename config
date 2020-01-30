@@ -1,0 +1,6 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ theme: "Pop-Dark";
+ combi-modi: "window,drun,ssh";
+ }
+
