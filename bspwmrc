@@ -1,15 +1,11 @@
 #! /bin/sh
 
+kitty &
 sxhkd &
-compton -b &
-background &
-conky -c $HOME/.config/conky/conkyrc &
-$HOME/git/archSetup/dualM &
-$HOME/.config/polybar/launch.sh
+#background &
 
 
 bspc monitor HDMI-1-2 I II III IV V VI
-bspc monitor HDMI-2 VII VIII IX X
 bspc config window_gap		20
 bspc config border_width         2
 
