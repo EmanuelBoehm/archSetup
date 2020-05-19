@@ -9,6 +9,8 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 xsetroot -cursor_name left_ptr &
 xset +fp /home/emi/.fonts
 xset fp rehash
+
+dualM flip
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
@@ -36,5 +38,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-kitty &
-exec bspwm
+sxhkd &
+alacritty &
+exec dbus-launch leftwm
