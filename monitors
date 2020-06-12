@@ -1,0 +1,6 @@
+#!/bin/bash
+
+var=$(./monitors_rust/target/debug/monitors_rust)
+echo "$var"
+export mon1="${var%% *}"
+export mon2="${var##* }"
