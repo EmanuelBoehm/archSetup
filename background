@@ -1,2 +1,1 @@
-#!/usr/bin/env bash
-python3 $HOME/scripts/background/main.py
+background_rust/target/debug/background
