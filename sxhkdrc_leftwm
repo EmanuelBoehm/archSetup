@@ -10,7 +10,9 @@ super + Return
 super + r
 	pkill -USR1 -x sxhkd
 super + w
-	brave
+	firefox
+super + shift + w
+	qutebrowser
 super + d
 	rofi -show drun
 #

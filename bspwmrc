@@ -1,20 +1,17 @@
 #! /bin/sh
 
-kitty &
 sxhkd &
-#background &
+tint2 > \dev\null&
+background &
 
 
-bspc monitor HDMI-1-2 I II III IV V VI
+bspc monitor $mon1 -d Term Web Fill
+bspc monitor $mon2 -d Doc Music Commun
 bspc config window_gap		20
 bspc config border_width         2
-
+bspc config left_padding			 33
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
