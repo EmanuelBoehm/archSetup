@@ -1,0 +1,21 @@
+#!/bin/bash
+#INFO get the current hdmi ports with xrandr -q | grep HDMI
+if [ -z "$mon1" ]; then
+    monitor1="$mon1"
+else
+    monitor1="HDMI-2"
+fi
+if [ -z "$mon2" ]; then
+    monitor2="$mon2"
+else
+    monitor2="DVI-0"
+fi
+
+##add more options(and make them more readable)
+if [ -z "$1" ]; then
+	rotate="normal"
+else
+	rotate="left"
+fi
+
+xrandr --output "$monitor1" --primary --rotate "$rotate" --output "$monitor2" --auto --left-of "$monitor1"

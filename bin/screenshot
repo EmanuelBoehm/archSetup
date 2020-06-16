@@ -1,0 +1,4 @@
+#!/bin/bash
+#DOC xclip takes the input from maim and save it to the clipboard
+#TODO 
+maim -s | xclip -selection clipboard -t image/png
