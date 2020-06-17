@@ -1,0 +1,52 @@
+#!/bin/bash
+config="../../configs"
+
+function dwm_i {
+	mkdir ~/software
+	cd ~/software
+	git clone https://git.suckless.org/dwm
+	cd dwm
+	sudo make clean install
+}
+
+function bspwm_i {
+	if ! pacman -Qs bspwm > /dev/null ; then
+  		sudo pacman -S bspwm sxhkd
+	fi
+	ln -s $config/bspwm ~/.config
+	ln -s $config/sxhkd ~/.config
+}
+function leftwm_i {
+	if ! pacman -Qs rust > /dev/null ; then
+  		sudo pacman -S rust
+	fi
+	mkdir ~/software
+	cd ~/software
+	git clone https://github.com/leftwm/leftwm
+	cd leftwm
+	cargo build
+	ln -s $config/leftwm ~/.config
+}
+function i3_i {
+	if ! pacman -Qs i3 > /dev/null ; then
+  		sudo pacman -S i3
+	fi
+}
+function xmonad_i {
+	if ! pacman -Qs xmonad > /dev/null ; then
+  		sudo pacman -S xmonad
+	fi
+}
+function qtile_i {
+	if ! pacman -Qs qtile > /dev/null ; then
+  		sudo pacman -S qtile
+	fi
+}
+case "$1" in 
+	dwm ) 		dwm_i ;;
+	bspwm ) 	bspwm_i ;;
+	leftwm ) 	leftwm_i ;;
+	i3 ) 		i3_i ;;
+	xmonad ) 	xmonad_i ;;
+	qtile ) 	qtile_i ;;
+esac

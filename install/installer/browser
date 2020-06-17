@@ -1,0 +1,32 @@
+#!/bin/bash
+function qutebrowser_i {
+	if ! pacman -Qs qutebrowser > /dev/null ; then
+  		sudo pacman -S qutebrowser
+	fi
+}
+function firefox_i {
+	if ! pacman -Qs firefox > /dev/null ; then
+  		sudo pacman -S firefox
+	fi
+}
+function brave_i {
+	if ! pacman -Qs brave > /dev/null ; then
+  		mkdir ~/software
+		cd ~/software
+		git clone https://aur.archlinux.org/brave-bin
+		cd brave-bin
+		makepkg -si
+	fi
+}
+function unknown_i {
+	if ! pacman -Qs $1 > /dev/null ; then
+  		sudo pacman -S $1
+	fi
+}
+
+case "$1" in 
+	qutebrowser ) 	qutebrowser_i ;;
+	firefox ) 	firefox_i ;;
+	brave ) 	brave_i ;;
+	(*) ) 		unknown_i ;;
+esac

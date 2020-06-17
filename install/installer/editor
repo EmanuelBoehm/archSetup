@@ -1,0 +1,26 @@
+#!/bin/bash
+config="../../configs"
+
+function nvim_i {
+	if ! pacman -Qs neovim > /dev/null ; then
+  		sudo pacman -S neovim
+	fi
+	ln -s $configs/nvim ~/.config/nvim/
+}
+function vim_i {
+	if ! pacman -Qs vim > /dev/null ; then
+  		sudo pacman -S vim
+	fi
+	ln $configs/vim/vimrc ~/.vimrc
+}
+function nano_i {
+	if ! pacman -Qs nano > /dev/null ; then
+  		sudo pacman -S nano
+	fi
+}
+
+case "$1" in 
+	vim ) 	vim_i ;;
+	nvim ) nvim_i ;;
+	nano ) nano_i ;;
+esac
