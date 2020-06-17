@@ -18,9 +18,12 @@ while [ -n "$1" ]; do
 	esac
 	shift
 done
-
-./installer/terminal $TERMINAL
-./installer/browser $BROWSER
-./installer/editor $EDITOR
-./installer/wm $WM
+#dependencies
+sudo pacman -S python python-pip git make-devel xorg xorg-xinit zsh 
+sudo pip install pywal
+## running installer instances
+./installer/terminal $TERMINAL &
+./installer/browser $BROWSER &
+./installer/editor $EDITOR &
+./installer/wm $WM &
 
