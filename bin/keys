@@ -1,0 +1,6 @@
+#!/bin/bash
+
+setxkbmap -option caps:escape
+setxkbmap -option escape:caps
+xmodmap /home/emi/gt/archsetup/configs/xorg/Xmodmap
+

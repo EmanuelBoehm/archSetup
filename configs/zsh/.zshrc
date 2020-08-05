@@ -12,5 +12,5 @@ alias vim=nvim
 (cat ~/.cache/wal/sequences &)
 autoload -Uz compinit
 compinit
-export PATH=/home/emi/.cargo/bin:$PATH
+export PATH=/home/emi/.cargo/bin:/home/emi/.my_bin:$PATH
 export PROMPT=' %~ %# '

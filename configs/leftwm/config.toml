@@ -10,7 +10,7 @@ key = "d"
 
 [[keybind]]
 command = "Execute"
-value = "qutebrowser"
+value = "firefox"
 modifier = ["modkey"]
 key = "w"
 

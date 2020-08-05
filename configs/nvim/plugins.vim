@@ -1,4 +1,5 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
+	Plug 'ap/vim-css-color'
 	Plug 'tpope/vim-surround'
 	" let's you comment out blocks
 	Plug 'scrooloose/nerdcommenter'
@@ -18,5 +19,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	"closes  quotes
 	Plug 'Raimondi/delimitMate'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'neoclide/coc-python'
 call plug#end()
 

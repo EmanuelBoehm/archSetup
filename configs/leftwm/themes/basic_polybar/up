@@ -1,7 +1,7 @@
 #!/bin/bash
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
-
+SCRIPTPATH/scripts/color_theme.py
 #down the last running theme
 if [ -f "/tmp/leftwm-theme-down" ]; then
     /tmp/leftwm-theme-down
@@ -19,15 +19,7 @@ fi
 
 #set the theme.toml config
 echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
-
-
-
-index=0
-monitor="$(polybar -m | grep +0+0 | sed s/:.*// | tac)"
-leftwm-state -q -n -t $SCRIPTPATH/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
-do 
-  barname="mainbar$index"
-  monitor=$monitor offsetx=$x width=$width polybar -c $SCRIPTPATH/polybar.config $barname &> /dev/null &
-  let index=index+1
-done
+~/.my_bin/dualM
+wal -i ~/wallpaper
+polybar main &
 

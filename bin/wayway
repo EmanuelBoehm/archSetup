@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /home/emi/software/smithay/anvil
+cargo run --features logind -- --tty-udev
+

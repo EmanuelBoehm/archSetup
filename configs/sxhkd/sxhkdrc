@@ -10,7 +10,7 @@ super + Return
 super + r
 	pkill -USR1 -x sxhkd
 super + w
-	firefox
+	brave
 super + shift + w
 	qutebrowser
 super + d
